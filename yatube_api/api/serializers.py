@@ -8,7 +8,7 @@ from posts.models import (Post,
 
 
 class PostSerializer(serializers.ModelSerializer):
-    '''Сериализатор модели постов.'''
+    """Сериализатор модели постов."""
     author = SlugRelatedField(
         read_only=True,
         slug_field='username',
@@ -21,14 +21,14 @@ class PostSerializer(serializers.ModelSerializer):
 
 
 class GroupSerializer(serializers.ModelSerializer):
-    '''Сериализатор модели групп.'''
+    """Сериализатор модели групп."""
     class Meta:
         model = Group
         fields = '__all__'
 
 
 class CommentSerializer(serializers.ModelSerializer):
-    '''Сериализатор модели комментариев.'''
+    """Сериализатор модели комментариев."""
     author = SlugRelatedField(slug_field='username', read_only=True)
 
     class Meta:

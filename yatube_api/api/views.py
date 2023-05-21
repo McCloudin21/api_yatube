@@ -2,11 +2,11 @@ from django.shortcuts import get_object_or_404
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 
-from .permissions import AuthorOrReadOnlyPermissions
-from .serializers import (CommentSerializer,
-                          GroupSerializer,
-                          PostSerializer,
-                          )
+from api.permissions import AuthorOrReadOnlyPermissions
+from api.serializers import (CommentSerializer,
+                             GroupSerializer,
+                             PostSerializer,
+                             )
 from posts.models import (Post,
                           Group,
                           )
